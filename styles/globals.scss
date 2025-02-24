@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'variables';
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+	font-family: var(--font-pt-sans);
+}
