@@ -1,5 +1,7 @@
+import { ThemeProvider } from 'next-themes';
+
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
-	return <div>{children}</div>;
+	return <ThemeProvider defaultTheme="system">{children}</ThemeProvider>;
 };
 
 export default AppLayout;
