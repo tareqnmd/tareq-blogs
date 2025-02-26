@@ -15,10 +15,12 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
-    "sass": "^1.85.0"
+    "sass": "^1.85.0",
+    "sonner": "^2.0.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@tanstack/eslint-plugin-query": "^5.66.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
