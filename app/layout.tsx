@@ -1,4 +1,4 @@
-import AppLayout from '@/components/layout/AppLayout';
+import { AppLayout } from '@/components/layout';
 import '@/styles/globals.scss';
 import type { Metadata } from 'next';
 import { PT_Sans } from 'next/font/google';
