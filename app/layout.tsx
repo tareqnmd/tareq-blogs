@@ -24,7 +24,7 @@ export default function RootLayout({
 			suppressHydrationWarning
 			lang="en"
 		>
-			<body className={`${geistSans.variable} antialiased`}>
+			<body className={`container grid min-h-screen grid-rows-[auto_1fr_auto] ${geistSans.variable} antialiased`}>
 				<AppLayout>{children}</AppLayout>
 			</body>
 		</html>

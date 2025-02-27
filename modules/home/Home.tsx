@@ -1,9 +1,7 @@
-import ThemeToggle from '@/components/shared/theme-toggle';
-
 const Home = () => {
 	return (
 		<div>
-			<ThemeToggle />
+			<h1>Home</h1>
 		</div>
 	);
 };
