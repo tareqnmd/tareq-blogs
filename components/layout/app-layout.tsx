@@ -7,7 +7,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
 			<ThemeProvider>
 				<QueryProvider>
 					<Navbar />
-					{children}
+					<main>{children}</main>
 					<Footer />
 				</QueryProvider>
 			</ThemeProvider>

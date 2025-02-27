@@ -5,7 +5,7 @@ import { BsLinkedin } from 'react-icons/bs';
 const Footer = () => {
 	return (
 		<footer className="border-t footer flex py-2 md:py-4 xl:py-6 items-center justify-between">
-			<p className="text-sm text-gray-500">
+			<p className="text-sm">
 				&copy; {new Date().getFullYear()} Tareq Blogs. All rights reserved.
 			</p>
 			<div className="flex items-center gap-2">
