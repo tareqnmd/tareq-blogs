@@ -8,17 +8,22 @@ const ThemeToggle = () => {
 	const isDark = theme === 'dark';
 	const isLight = theme === 'light';
 
+	const handleThemeToggle = () => {
+		setTheme(isDark ? 'light' : 'dark');
+	};
+
 	return (
-		<div className="theme-toggle">
+		<button
+			className="theme-toggle"
+			onClick={handleThemeToggle}
+		>
 			<MdLightMode
 				className={cn('theme-toggle-icon cursor-pointer', isLight && 'hidden')}
-				onClick={() => setTheme('light')}
 			/>
 			<MdDarkMode
 				className={cn('theme-toggle-icon cursor-pointer', isDark && 'hidden')}
-				onClick={() => setTheme('dark')}
 			/>
-		</div>
+		</button>
 	);
 };
 
