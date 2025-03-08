@@ -1,17 +1,18 @@
 export enum Routes {
-	Home = '/',
-	HOME_NAME = 'Home',
-	About = '/about',
+	HOME = '/',
+	BLOGS = '/blogs',
+	BLOGS_NAME = 'Blogs',
+	ABOUT = '/about',
 	ABOUT_NAME = 'About',
 }
 
-export const routeLists = {
-	HOME: {
-		route: Routes.Home,
-		name: Routes.HOME_NAME,
+export const routeLists = [
+	 {
+		route: Routes.BLOGS,
+		name: Routes.BLOGS_NAME,
 	},
-	ABOUT: {
-		route: Routes.About,
+	{
+		route: Routes.ABOUT,
 		name: Routes.ABOUT_NAME,
 	},
-};
+];

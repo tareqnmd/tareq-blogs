@@ -5,7 +5,7 @@ const Logo = () => {
 	return (
 		<Link
 			className="logo"
-			href={Routes.Home}
+			href={Routes.HOME}
 		>
 			<svg
 				width="35"
