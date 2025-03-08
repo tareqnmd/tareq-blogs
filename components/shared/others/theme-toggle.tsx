@@ -1,5 +1,5 @@
 'use client';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib';
 import { useTheme } from 'next-themes';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 

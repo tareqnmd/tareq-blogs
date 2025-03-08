@@ -1,4 +1,4 @@
-import { Routes } from '@/lib/routes';
+import { Routes } from '@/utils';
 import Link from 'next/link';
 
 const Logo = () => {
