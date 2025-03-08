@@ -1,5 +1,5 @@
 import { AppLayout } from '@/components/layout';
-import '@/styles/globals.scss';
+import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { PT_Sans } from 'next/font/google';
 
@@ -24,7 +24,10 @@ export default function RootLayout({
 			suppressHydrationWarning
 			lang="en"
 		>
-			<body className={`${geistSans.variable} antialiased`}>
+			<body
+				suppressHydrationWarning
+				className={`${geistSans.variable} antialiased`}
+			>
 				<AppLayout>{children}</AppLayout>
 			</body>
 		</html>
