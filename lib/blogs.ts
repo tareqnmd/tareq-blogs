@@ -1,7 +1,7 @@
 export const recentBlogs = [
 	{
 		title: 'Building Scalable React Applications with Next.js 14',
-		description:
+		shortContent:
 			'Explore the latest features in Next.js 14 and learn how to architect large-scale applications with best practices for performance and maintainability.',
 		date: '2024-03-15',
 		category: 'Development',
@@ -14,7 +14,7 @@ export const recentBlogs = [
 	},
 	{
 		title: 'The Rise of AI in Software Development',
-		description:
+		shortContent:
 			'How AI-powered tools like GitHub Copilot and ChatGPT are transforming the way developers write code and what it means for the future of programming.',
 		date: '2024-03-12',
 		category: 'Technology',
@@ -27,7 +27,7 @@ export const recentBlogs = [
 	},
 	{
 		title: 'Mastering TypeScript: Advanced Type System Features',
-		description: `Deep dive into TypeScript's advanced features including conditional types, mapped types, and the latest additions in TypeScript 5.4.`,
+		shortContent: `Deep dive into TypeScript's advanced features including conditional types, mapped types, and the latest additions in TypeScript 5.4.`,
 		date: '2024-03-08',
 		category: 'Development',
 		tags: ['TypeScript', 'JavaScript', 'Programming'],
@@ -42,7 +42,7 @@ export const recentBlogs = [
 export const topBlogs = [
 	{
 		title: 'Web Performance Optimization Techniques for 2024',
-		description:
+		shortContent:
 			'Learn cutting-edge techniques for optimizing web performance, from Core Web Vitals to advanced caching strategies and modern image optimization.',
 		date: '2024-03-01',
 		category: 'Performance',
@@ -55,7 +55,7 @@ export const topBlogs = [
 	},
 	{
 		title: 'Implementing Micro-Frontends: A Practical Guide',
-		description:
+		shortContent:
 			'Step-by-step guide to implementing micro-frontends architecture in large applications, with real-world examples and best practices.',
 		date: '2024-02-28',
 		category: 'Architecture',
@@ -68,7 +68,7 @@ export const topBlogs = [
 	},
 	{
 		title: 'State Management in 2024: Beyond Redux',
-		description:
+		shortContent:
 			'Exploring modern state management solutions including Zustand, Jotai, and React Query, and when to use each approach.',
 		date: '2024-02-25',
 		category: 'Development',
@@ -81,7 +81,7 @@ export const topBlogs = [
 	},
 	{
 		title: 'Building Accessible Web Applications',
-		description:
+		shortContent:
 			'Comprehensive guide to implementing accessibility in web applications, including ARIA attributes, keyboard navigation, and testing methodologies.',
 		date: '2024-02-20',
 		category: 'Accessibility',
@@ -93,3 +93,17 @@ export const topBlogs = [
 		views: 9876,
 	},
 ];
+
+export const blogDetails = {
+	title: 'Building Accessible Web Applications',
+	content:
+		'Comprehensive guide to implementing accessibility in web applications, including ARIA attributes, keyboard navigation, and testing methodologies.',
+	date: '2024-02-20',
+	category: 'Accessibility',
+	tags: ['A11y', 'Web Development', 'Inclusion'],
+	image: '/images/blog.jpg',
+	slug: 'building-accessible-web-applications',
+	author: 'Maria Garcia',
+	readingTime: 11,
+	views: 9876,
+};

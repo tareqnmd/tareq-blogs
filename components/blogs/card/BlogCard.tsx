@@ -21,7 +21,7 @@ const BlogCard = ({
 			<BlogCategory category={blog.category} />
 			<BlogHeaderInfo blog={blog} />
 			<BlogCardTitle blog={blog} />
-			<BlogCardDescription description={blog.description} />
+			<BlogCardDescription shortContent={blog.shortContent} />
 			<BlogTags tags={blog.tags} />
 		</div>
 	);

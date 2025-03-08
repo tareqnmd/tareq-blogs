@@ -1,5 +1,9 @@
-const BlogCardDescription = ({ description }: { description: string }) => {
-	return <p className="line-clamp-2">{description}</p>;
+const BlogCardDescription = ({
+	shortContent,
+}: {
+	shortContent: string;
+}) => {
+	return <p className="line-clamp-2 leading-5">{shortContent}</p>;
 };
 
 export default BlogCardDescription;
