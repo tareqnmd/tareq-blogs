@@ -1,4 +1,4 @@
-import { NotFound as AppNotFound } from '@/components/sharedg';
+import { NotFound as AppNotFound } from '@/components/shared';
 
 const NotFound = () => {
 	return <AppNotFound />;

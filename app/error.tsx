@@ -1,5 +1,5 @@
 'use client';
-import { Error as AppError } from '@/components/sharedg';
+import { Error as AppError } from '@/components/shared';
 
 const Error = ({
 	error,
