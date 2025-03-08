@@ -1,8 +1,7 @@
-import { Blog } from '@/utils';
+import { BlogHeaderInfo as BlogHeaderInfoType } from '@/utils';
 import { BlogDate, BlogReadTime, BlogViews } from '.';
-
-const BlogHeaderInfo = ({ blog }: { blog: Blog }) => {
-	const { date, readingTime, views } = blog;
+const BlogHeaderInfo = ({ headerInfo }: { headerInfo: BlogHeaderInfoType }) => {
+	const { date, readingTime, views } = headerInfo;
 	return (
 		<div className="flex flex-wrap items-center gap-1 md:gap-2 md:text-sm text-xs">
 			<BlogDate date={date} />

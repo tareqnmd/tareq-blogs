@@ -19,7 +19,7 @@ const BlogCard = ({
 		>
 			<BlogCardImage blog={blog} />
 			<BlogCategory category={blog.category} />
-			<BlogHeaderInfo blog={blog} />
+			<BlogHeaderInfo headerInfo={blog} />
 			<BlogCardTitle blog={blog} />
 			<BlogCardDescription shortContent={blog.shortContent} />
 			<BlogTags tags={blog.tags} />

@@ -1,3 +1,9 @@
+export type BlogHeaderInfo = {
+	date: string;
+	readingTime: number;
+	views: number;
+};
+
 export type Blog = {
 	title: string;
 	shortContent: string;
