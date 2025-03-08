@@ -1,4 +1,4 @@
-import { Loading as AppLoading } from '@/components/shared';
+import { Loading as AppLoading } from '@/components/sharedg';
 
 const Loading = () => {
 	return <AppLoading />;

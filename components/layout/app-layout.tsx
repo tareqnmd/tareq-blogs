@@ -1,5 +1,5 @@
 import { QueryProvider, ThemeProvider } from '../provider';
-import { Footer, Navbar } from '../shared';
+import { Footer, Navbar } from '../sharedg';
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
