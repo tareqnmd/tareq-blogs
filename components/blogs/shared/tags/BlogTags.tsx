@@ -1,4 +1,4 @@
-import BlogTag from './BlogTagg';
+import BlogTag from '../BlogTag';
 
 const BlogTags = ({ tags }: { tags: string[] }) => {
 	return (
