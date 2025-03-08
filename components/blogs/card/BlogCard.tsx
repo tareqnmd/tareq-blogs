@@ -1,13 +1,25 @@
+import { cn } from '@/lib/cn';
 import { Blog } from '@/utils/types';
 import { BlogCardDescription, BlogCardImage, BlogCardTitle } from '.';
-import { BlogCategory, BlogTags, BlogTimeInfo } from '../shared';
+import { BlogCategory, BlogHeaderInfo, BlogTags } from '../shared';
 
-const BlogCard = ({ blog }: { blog: Blog }) => {
+const BlogCard = ({
+	blog,
+	extraClass,
+}: {
+	blog: Blog;
+	extraClass?: string;
+}) => {
 	return (
-		<div className="overflow-hidden transition-all duration-300 flex flex-col gap-2">
+		<div
+			className={cn(
+				'overflow-hidden transition-all duration-300 flex flex-col gap-2',
+				extraClass
+			)}
+		>
 			<BlogCardImage blog={blog} />
 			<BlogCategory category={blog.category} />
-			<BlogTimeInfo blog={blog} />
+			<BlogHeaderInfo blog={blog} />
 			<BlogCardTitle blog={blog} />
 			<BlogCardDescription description={blog.description} />
 			<BlogTags tags={blog.tags} />
