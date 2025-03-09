@@ -1,17 +1,20 @@
-import BlogCard from './card/BlogCard';
+import { Blogs } from '@/utils';
+import { Title } from '../shared';
+import { BlogCard } from './card';
 
-const RecentBlogs = () => {
+const RecentBlogs = ({ blogs }: { blogs: Blogs }) => {
 	return (
-		<div>
-			<h2>Recent Blogs</h2>
-			<BlogCard
-				title="UX review presentations"
-				description="How do you create compelling presentations that wow your colleagues and impress your managers?"
-				date="Sunday, 1 Jan 2023"
-				categories={['Design', 'Research', 'Presentation']}
-				image="/images/blog.jpg"
-				slug="ux-review-presentations"
-			/>
+		<div className="flex flex-col gap-4 md:gap-6">
+			<Title>Recent Blogs</Title>
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+				{blogs.map((blog, index) => (
+					<BlogCard
+						key={blog.slug}
+						blog={blog}
+						extraClass={index === 0 ? 'col-span-full' : ''}
+					/>
+				))}
+			</div>
 		</div>
 	);
 };

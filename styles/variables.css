@@ -1,8 +1,8 @@
 :root {
 	--background: #f8fafc;
 	--foreground: #171717;
-	--primary: #000000;
-	--secondary: #171717;
+	--primary: #090d1f;
+	--secondary: #ededed;
 	--danger: #a31d1d;
 	--success: #0d4715;
 	--warning: #e9762b;
@@ -13,7 +13,7 @@
 	--background: #090d1f;
 	--foreground: #ededed;
 	--primary: #ededed;
-	--secondary: #171717;
+	--secondary: #090d1f;
 	--danger: #a31d1d;
 	--success: #0d4715;
 	--warning: #e9762b;

@@ -1,6 +1,8 @@
+import DetailBlog from '@/components/blogs/detail/DetailBlog';
+import { blogDetails } from '@/lib/blogs';
+
 const BlogPage = () => {
-	return <div>BlogPage</div>;
+	return <DetailBlog blog={blogDetails} />;
 };
 
 export default BlogPage;
-

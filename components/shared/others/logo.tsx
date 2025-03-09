@@ -1,11 +1,11 @@
-import { Routes } from '@/lib/routes';
+import { Routes } from '@/utils';
 import Link from 'next/link';
 
 const Logo = () => {
 	return (
 		<Link
 			className="logo"
-			href={Routes.Home}
+			href={Routes.HOME}
 		>
 			<svg
 				width="35"
