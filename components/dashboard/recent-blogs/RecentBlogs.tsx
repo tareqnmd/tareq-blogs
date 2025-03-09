@@ -1,5 +1,5 @@
 import { Blogs } from '@/utils';
-import { BlogCard } from './card';
+import { BlogCard } from '../../blogs/card';
 
 const RecentBlogs = ({ blogs }: { blogs: Blogs }) => {
 	return (

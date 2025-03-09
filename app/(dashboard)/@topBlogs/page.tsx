@@ -1,4 +1,4 @@
-import TopBlogs from '@/components/blogs/TopBlogs';
+import { TopBlogs } from '@/components/dashboard';
 import { topBlogs } from '@/lib/blogs';
 
 const TopBlogsPage = () => {

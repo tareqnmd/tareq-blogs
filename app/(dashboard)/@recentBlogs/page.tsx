@@ -1,4 +1,4 @@
-import RecentBlogs from '@/components/blogs/RecentBlogs';
+import { RecentBlogs } from '@/components/dashboard';
 import { recentBlogs } from '@/lib/blogs';
 
 const RecentBlogsPage = () => {

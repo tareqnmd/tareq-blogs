@@ -1,4 +1,4 @@
-import DetailBlog from '@/components/blogs/detail/DetailBlog';
+import { DetailBlog } from '@/components/blogs';
 import { blogDetails } from '@/lib/blogs';
 
 const BlogPage = () => {

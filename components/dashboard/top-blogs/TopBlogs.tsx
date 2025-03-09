@@ -1,10 +1,10 @@
 import { Blogs } from '@/utils';
-import { Title } from '../shared';
-import { BlogCard } from './card';
+import { BlogCard } from '../../blogs/card';
+import { Title } from '../../shared';
 
 const TopBlogs = ({ blogs }: { blogs: Blogs }) => {
 	return (
-		<div className="flex flex-col gap-4 md:gap-8">
+		<div className="flex flex-col gap-4 md:gap-6">
 			<Title>Top Blogs</Title>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6">
 				{blogs.map((blog) => (

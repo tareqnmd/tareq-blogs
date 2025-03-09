@@ -1,3 +1,10 @@
+export type BlogCategory = {
+	name: string;
+	slug: string;
+};
+
+export type BlogCategories = BlogCategory[];
+
 export type BlogHeaderInfo = {
 	date: string;
 	readingTime: number;

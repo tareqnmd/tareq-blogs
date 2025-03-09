@@ -6,7 +6,7 @@ export const routeLists = [
 		name: Routes.BLOGS_NAME,
 	},
 	{
-		route: Routes.ABOUT,
-		name: Routes.ABOUT_NAME,
+		route: Routes.CATEGORIES,
+		name: Routes.CATEGORIES_NAME,
 	},
 ];

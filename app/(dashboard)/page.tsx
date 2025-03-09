@@ -1,7 +1,7 @@
-import Dashboard from '@/components/blogs/Dashboard';
+import { DashboardLayout } from '@/components/dashboard';
 
 const DashboardPage = () => {
-	return <Dashboard />;
+	return <DashboardLayout />;
 };
 
 export default DashboardPage;
