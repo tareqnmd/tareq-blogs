@@ -6,7 +6,7 @@ const BlogCardImage = ({ blog }: { blog: Blog }) => {
 	return (
 		<Link
 			href={`${Routes.BLOGS}/${slug}`}
-			className="relative aspect-[4/3] md:aspect-[16/9] max-h-[200px] md:max-h-[300px] overflow-hidden blog-card-media"
+			className="relative aspect-[4/3] md:aspect-[16/9] max-h-[200px] md:max-h-[300px] w-full overflow-hidden blog-card-media"
 		>
 			<Image
 				src={image}

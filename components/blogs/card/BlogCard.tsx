@@ -11,18 +11,17 @@ const BlogCard = ({
 	extraClass?: string;
 }) => {
 	return (
-		<div
-			className={cn(
-				'overflow-hidden transition-all duration-300 flex flex-col gap-2',
-				extraClass
-			)}
-		>
-			<BlogCardImage blog={blog} />
-			<BlogCategory category={blog.category} />
-			<BlogHeaderInfo headerInfo={blog} />
-			<BlogCardTitle blog={blog} />
-			<BlogCardDescription shortContent={blog.shortContent} />
-			<BlogTags tags={blog.tags} />
+		<div className={cn('@container', extraClass)}>
+			<div className="overflow-hidden transition-all duration-300 grid grid-cols-1 @xl:grid-cols-2 gap-2">
+				<BlogCardImage blog={blog} />
+				<div className="flex flex-col gap-2">
+					<BlogCategory category={blog.category} />
+					<BlogHeaderInfo headerInfo={blog} />
+					<BlogCardTitle blog={blog} />
+					<BlogCardDescription shortContent={blog.shortContent} />
+					<BlogTags tags={blog.tags} />
+				</div>
+			</div>
 		</div>
 	);
 };
