@@ -1,4 +1,4 @@
-import { CategoryWiseBlogs } from '@/components/categories';
+import { CategoryWiseBlogs } from '@/components/blogs/categories';
 
 const CategoryWithBlogsPage = () => {
 	return <CategoryWiseBlogs />;

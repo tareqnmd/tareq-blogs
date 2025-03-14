@@ -1,7 +1,11 @@
+import {
+	BlogCategory,
+	BlogHeaderInfo,
+	BlogTags,
+} from '@/components/blogs/shared';
 import { cn } from '@/lib/cn';
 import { Blog } from '@/utils/types';
 import { BlogCardDescription, BlogCardImage, BlogCardTitle } from '.';
-import { BlogCategory, BlogHeaderInfo, BlogTags } from '../shared';
 
 const BlogCard = ({
 	blog,

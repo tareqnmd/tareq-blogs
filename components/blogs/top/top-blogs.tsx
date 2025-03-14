@@ -1,6 +1,6 @@
 import { Blogs } from '@/utils';
-import { BlogCard } from '../../blogs/card';
 import { Title } from '../../shared';
+import { BlogCard } from '../card';
 
 const TopBlogs = ({ blogs }: { blogs: Blogs }) => {
 	return (

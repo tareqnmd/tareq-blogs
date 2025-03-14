@@ -1,6 +1,6 @@
 import { BlogCategories as BlogCategoriesType } from '@/utils/types';
 import { Title } from '../../shared';
-import { BlogCategory } from './';
+import BlogCategory from './blog-category';
 
 const BlogCategories = ({ categories }: { categories: BlogCategoriesType }) => {
 	return (

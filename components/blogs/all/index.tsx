@@ -1,1 +1,1 @@
-export { default as AllBlogs } from './AllBlogs';
+export { default as AllBlogs } from './all-blogs';

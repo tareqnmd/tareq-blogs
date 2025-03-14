@@ -1,3 +1,3 @@
-export { default as BlogBanner } from './BlogBanner';
-export { default as BlogDetailContent } from './BlogDetailContent';
-export { default as DetailBlog } from './DetailBlog';
+export { default as BlogBanner } from './blog-banner';
+export { default as BlogDetailContent } from './blog-detail-content';
+export { default as DetailBlog } from './blog-details';
