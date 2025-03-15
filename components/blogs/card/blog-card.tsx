@@ -16,7 +16,7 @@ const BlogCard = ({
 }) => {
 	return (
 		<div className={cn('@container', extraClass)}>
-			<div className="overflow-hidden transition-all duration-300 grid grid-cols-1 @xl:grid-cols-2 gap-2">
+			<div className="overflow-hidden transition-all duration-300 grid grid-cols-1 @3xl:grid-cols-2 gap-2">
 				<BlogCardImage blog={blog} />
 				<div className="flex flex-col gap-2">
 					<BlogCategory category={blog.category} />

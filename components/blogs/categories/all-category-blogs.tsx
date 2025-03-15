@@ -1,7 +1,5 @@
-const AllCategoryBlogs = () => {
-	return <div>AllCategoryBlogs</div>;
+const AllCategoryBlogs = async () => {
+	return <></>;
 };
 
 export default AllCategoryBlogs;
-
-

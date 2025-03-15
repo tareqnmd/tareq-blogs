@@ -7,7 +7,7 @@ import { BlogDetails as BlogDetailsType } from '@/utils/types';
 import BlogBanner from './blog-banner';
 import BlogDetailContent from './blog-detail-content';
 
-const BlogDetails = ({ blog }: { blog: BlogDetailsType }) => {
+const BlogDetails = async ({ blog }: { blog: BlogDetailsType }) => {
 	return (
 		<div className="flex flex-col gap-4">
 			<BlogBanner image={blog.image} />
