@@ -1,7 +1,8 @@
 import { BlogDetails } from '@/components/blogs';
 
 const BlogPage = async ({ params }: { params: { slug: string } }) => {
-	return <BlogDetails slug={params.slug} />;
+	const { slug } = params;
+	return <BlogDetails slug={slug} />;
 };
 
 export default BlogPage;
