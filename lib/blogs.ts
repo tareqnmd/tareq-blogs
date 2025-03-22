@@ -1,4 +1,39 @@
-export const recentBlogs = [
+const categories = [
+	{
+		name: 'Accessibility',
+		slug: 'accessibility',
+	},
+	{
+		name: 'Web Development',
+		slug: 'web-development',
+	},
+	{
+		name: 'React',
+		slug: 'react',
+	},
+	{
+		name: 'Next.js',
+		slug: 'nextjs',
+	},
+	{
+		name: 'TypeScript',
+		slug: 'typescript',
+	},
+	{
+		name: 'JavaScript',
+		slug: 'javascript',
+	},
+	{
+		name: 'HTML',
+		slug: 'html',
+	},
+	{
+		name: 'CSS',
+		slug: 'css',
+	},
+];
+
+export const blogs = [
 	{
 		title: 'Building Scalable React Applications with Next.js 14',
 		shortContent:
@@ -37,9 +72,6 @@ export const recentBlogs = [
 		readingTime: 12,
 		views: 1000,
 	},
-];
-
-export const topBlogs = [
 	{
 		title: 'Web Performance Optimization Techniques for 2024',
 		shortContent:
@@ -94,52 +126,59 @@ export const topBlogs = [
 	},
 ];
 
-export const blogDetails = {
-	title: 'Building Accessible Web Applications',
-	content:
-		'Comprehensive guide to implementing accessibility in web applications, including ARIA attributes, keyboard navigation, and testing methodologies.',
-	date: '2024-02-20',
-	category: 'Accessibility',
-	tags: ['A11y', 'Web Development', 'Inclusion'],
-	image: '/images/blog.jpg',
-	slug: 'building-accessible-web-applications',
-	author: 'Maria Garcia',
-	readingTime: 11,
-	views: 9876,
+export const blogCategories = () => {
+	return {
+		statusCode: 200,
+		message: 'Categories retrieved successfully',
+		data: categories,
+		meta: {
+			total: categories.length,
+			limit: 10,
+			page: 1,
+			total_pages: 1,
+		},
+	};
 };
 
-export const categories = [
-	{
-		name: 'Accessibility',
-		slug: 'accessibility',
-	},
-	{
-		name: 'Web Development',
-		slug: 'web-development',
-	},
-	{
-		name: 'React',
-		slug: 'react',
-	},
-	{
-		name: 'Next.js',
-		slug: 'nextjs',
-	},
-	{
-		name: 'TypeScript',
-		slug: 'typescript',
-	},
-	{
-		name: 'JavaScript',
-		slug: 'javascript',
-	},
-	{
-		name: 'HTML',
-		slug: 'html',
-	},
-	{
-		name: 'CSS',
-		slug: 'css',
-	},
-	
-];
+export const recentBlogs = () => {
+	const dateWiseSort = blogs.sort(
+		(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+	);
+	const recent = dateWiseSort.slice(0, 3);
+	return {
+		statusCode: 200,
+		message: 'Recent blogs retrieved successfully',
+		data: recent,
+		meta: {
+			total: recent.length,
+			limit: 3,
+			page: 1,
+			total_pages: 1,
+		},
+	};
+};
+
+export const topBlogs = () => {
+	const viewWiseSort = blogs.sort((a, b) => b.views - a.views);
+	const top = viewWiseSort.slice(0, 4);
+	return {
+		statusCode: 200,
+		message: 'Top blogs retrieved successfully',
+		data: top,
+		meta: {
+			total: top.length,
+			limit: 4,
+			page: 1,
+			total_pages: 1,
+		},
+	};
+};
+
+export const blogDetails = (slug: string) => {
+	const blog = blogs.find((blog) => blog.slug === slug);
+	return {
+		statusCode: 200,
+		message: 'Blog details retrieved successfully',
+		data: blog,
+	};
+};
