@@ -14,6 +14,7 @@ export type BlogHeaderInfo = {
 export type Blog = {
 	title: string;
 	shortContent: string;
+	content: string;
 	date: string;
 	image: string;
 	slug: string;

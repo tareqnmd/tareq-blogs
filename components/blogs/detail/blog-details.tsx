@@ -3,21 +3,14 @@ import {
 	BlogHeaderInfo,
 	BlogTags,
 } from '@/components/blogs/shared';
-import { ServiceQueryKeyEnum } from '@/lib/enum';
-import { getBlogDetails } from '@/service';
-import { QueryClient } from '@tanstack/react-query';
+import { Blog } from '@/utils';
 import BlogBanner from './blog-banner';
 import BlogDetailContent from './blog-detail-content';
 import BlogDetailTitle from './blog-detail-title';
 
-const BlogDetails = async ({ slug }: { slug: string }) => {
-	const queryClient = new QueryClient();
-	const { data: blog } = await queryClient.fetchQuery({
-		queryKey: [ServiceQueryKeyEnum.GET_BLOG_DETAILS, slug],
-		queryFn: () => getBlogDetails(slug),
-	});
+const BlogDetails = async ({ blog }: { blog: Blog }) => {
 	return (
-		<div className="flex flex-col gap-2">
+		<div className="flex flex-col gap-4">
 			<BlogBanner image={blog.image} />
 			<BlogCategory category={blog.category} />
 			<BlogHeaderInfo headerInfo={blog} />
