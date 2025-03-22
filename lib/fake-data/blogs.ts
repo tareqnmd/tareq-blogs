@@ -1,3 +1,13 @@
+import categories from './categories';
+
+const getCategory = (slug: string) => {
+	const category = categories.find((category) => category.slug === slug);
+	if (!category) {
+		return null;
+	}
+	return category;
+};
+
 const blogs = [
 	{
 		title: 'Building Scalable React Applications with Next.js 14',
@@ -10,10 +20,8 @@ Performance optimization in large applications requires careful consideration of
 For maintainability, we'll cover architectural patterns that scale with your team and application size. This includes organizing components, implementing domain-driven design principles, and establishing clear boundaries between application layers.
 
 By the end of this article, you'll have a solid understanding of how to leverage Next.js 14's features to build applications that remain performant and maintainable as they grow.`,
-		shortContent:
-			'Explore the latest features in Next.js 14 and learn how to architect large-scale applications with best practices for performance and maintainability.',
 		date: '2024-03-15',
-		category: 'Development',
+		category: getCategory('development'),
 		tags: ['React', 'Next.js', 'Performance', 'Architecture'],
 		image: '/images/blog.jpg',
 		slug: 'building-scalable-react-applications',
@@ -34,10 +42,8 @@ Organizations are grappling with questions around intellectual property, securit
 Looking forward, we're likely to see AI tools become more specialized for particular languages, frameworks, and domains. The role of developers won't disappear but will evolve – emphasizing skills in prompt engineering, code review, and higher-level system design.
 
 This shift represents not just a change in tools but in the nature of programming itself. The most successful developers will be those who learn to collaborate effectively with AI, using it to augment their capabilities while maintaining the critical thinking and creativity that remain uniquely human.`,
-		shortContent:
-			'How AI-powered tools like GitHub Copilot and ChatGPT are transforming the way developers write code and what it means for the future of programming.',
 		date: '2024-03-12',
-		category: 'Technology',
+		category: getCategory('technology'),
 		tags: ['AI', 'Programming', 'Future Tech', 'Developer Tools'],
 		image: '/images/blog.jpg',
 		slug: 'ai-in-software-development',
@@ -60,9 +66,8 @@ TypeScript 5.4 introduces several enhancements to the type system, including mor
 Practical examples will show how to apply these concepts to real-world scenarios, including API client generation, state management typing, and form validation. You'll learn patterns for gradually introducing advanced typing to existing codebases and strategies for maintaining type definitions as your project evolves.
 
 By mastering these advanced features, you'll be able to create more precise, self-documenting code that catches errors at compile time rather than runtime.`,
-		shortContent: `Deep dive into TypeScript's advanced features including conditional types, mapped types, and the latest additions in TypeScript 5.4.`,
 		date: '2024-03-08',
-		category: 'Development',
+		category: getCategory('development'),
 		tags: ['TypeScript', 'JavaScript', 'Programming'],
 		image: '/images/blog.jpg',
 		slug: 'mastering-typescript-advanced-features',
@@ -85,10 +90,8 @@ Server-side and edge computing optimizations can dramatically improve time-to-fi
 Finally, we'll look at monitoring and analytics approaches that help you identify performance bottlenecks and prioritize optimization efforts based on real-user data. You'll learn how to establish performance budgets and implement automated testing to prevent regressions as your application evolves.
 
 By implementing these techniques, you'll be well-positioned to deliver exceptional web experiences that delight users and satisfy search engines' increasingly stringent performance requirements.`,
-		shortContent:
-			'Learn cutting-edge techniques for optimizing web performance, from Core Web Vitals to advanced caching strategies and modern image optimization.',
 		date: '2024-03-01',
-		category: 'Performance',
+		category: getCategory('performance'),
 		tags: ['Web Performance', 'Optimization', 'Core Web Vitals'],
 		image: '/images/blog.jpg',
 		slug: 'web-performance-optimization-2024',
@@ -113,10 +116,8 @@ Deployment and operational considerations are crucial for success. The guide cov
 Throughout the article, real-world examples illustrate how organizations including Spotify, IKEA, and Zalando have successfully implemented micro-frontends at scale. Their experiences highlight both the benefits and challenges of the approach.
 
 By following this practical guide, teams can implement micro-frontends architecture that scales with organizational growth, enables technological flexibility, and ultimately delivers better user experiences.`,
-		shortContent:
-			'Step-by-step guide to implementing micro-frontends architecture in large applications, with real-world examples and best practices.',
 		date: '2024-02-28',
-		category: 'Architecture',
+		category: getCategory('architecture'),
 		tags: ['Micro-Frontends', 'Architecture', 'JavaScript'],
 		image: '/images/blog.jpg',
 		slug: 'implementing-micro-frontends',
@@ -139,10 +140,8 @@ Context API with useReducer remains a viable built-in solution for many applicat
 The article provides decision frameworks for choosing between these options based on factors including team size, application complexity, and specific requirements like offline support or real-time updates.
 
 Finally, we'll look at emerging patterns in 2024, including signals-based reactivity and persistent actor models that may shape the future of React state management.`,
-		shortContent:
-			'Exploring modern state management solutions including Zustand, Jotai, and React Query, and when to use each approach.',
 		date: '2024-02-25',
-		category: 'Development',
+		category: getCategory('development'),
 		tags: ['React', 'State Management', 'JavaScript'],
 		image: '/images/blog.jpg',
 		slug: 'state-management-2024',
@@ -167,10 +166,9 @@ Visual considerations including color contrast, text sizing, and motion sensitiv
 Testing methodologies complete the picture, with approaches for manual testing, automated tooling, and involving users with disabilities in the evaluation process. We'll cover integrating accessibility testing into CI/CD pipelines and establishing metrics that track progress over time.
 
 By implementing these practices, developers can create web applications that honor the diversity of human ability and provide equivalent experiences to all users.`,
-		shortContent:
-			'Comprehensive guide to implementing accessibility in web applications, including ARIA attributes, keyboard navigation, and testing methodologies.',
+
 		date: '2024-02-20',
-		category: 'Accessibility',
+		category: getCategory('accessibility'),
 		tags: ['A11y', 'Web Development', 'Inclusion'],
 		image: '/images/blog.jpg',
 		slug: 'building-accessible-web-applications',
@@ -180,4 +178,7 @@ By implementing these practices, developers can create web applications that hon
 	},
 ];
 
-export default blogs;
+export default blogs.map((blog) => ({
+	...blog,
+	shortContent: blog.content.slice(0, 100) + '...',
+}));
