@@ -17,11 +17,11 @@ const BlogDetails = async ({ slug }: { slug: string }) => {
 		queryFn: () => getBlogDetails(slug),
 	});
 	return (
-		<div className="flex flex-col gap-4">
+		<div className="flex flex-col gap-2">
 			<BlogBanner image={blog.image} />
-			<BlogDetailTitle title={blog.title} />
 			<BlogCategory category={blog.category} />
 			<BlogHeaderInfo headerInfo={blog} />
+			<BlogDetailTitle title={blog.title} />
 			<BlogDetailContent content={blog.content} />
 			<BlogTags tags={blog.tags} />
 		</div>
