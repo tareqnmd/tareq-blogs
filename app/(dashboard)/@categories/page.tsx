@@ -1,5 +1,5 @@
 import { BlogCategories } from '@/components/blogs/categories';
-import { categories } from '@/lib/blogs';
+import { categories } from '@/lib/fake-data/response';
 const CategoriesPage = () => {
 	return <BlogCategories categories={categories} />;
 };
