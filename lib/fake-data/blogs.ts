@@ -1,11 +1,11 @@
 import categories from './categories';
 
-const getCategory = (slug: string) => {
+const getCategoryName = (slug: string) => {
 	const category = categories.find((category) => category.slug === slug);
 	if (!category) {
 		return null;
 	}
-	return category;
+	return category.name;
 };
 
 const blogs = [
@@ -21,7 +21,8 @@ For maintainability, we'll cover architectural patterns that scale with your tea
 
 By the end of this article, you'll have a solid understanding of how to leverage Next.js 14's features to build applications that remain performant and maintainable as they grow.`,
 		date: '2024-03-15',
-		category: getCategory('development'),
+		category: 'development',
+		categoryName: getCategoryName('development'),
 		tags: ['React', 'Next.js', 'Performance', 'Architecture'],
 		image: '/images/blog.jpg',
 		slug: 'building-scalable-react-applications',
@@ -43,7 +44,8 @@ Looking forward, we're likely to see AI tools become more specialized for partic
 
 This shift represents not just a change in tools but in the nature of programming itself. The most successful developers will be those who learn to collaborate effectively with AI, using it to augment their capabilities while maintaining the critical thinking and creativity that remain uniquely human.`,
 		date: '2024-03-12',
-		category: getCategory('technology'),
+		category: 'technology',
+		categoryName: getCategoryName('technology'),
 		tags: ['AI', 'Programming', 'Future Tech', 'Developer Tools'],
 		image: '/images/blog.jpg',
 		slug: 'ai-in-software-development',
@@ -67,7 +69,8 @@ Practical examples will show how to apply these concepts to real-world scenarios
 
 By mastering these advanced features, you'll be able to create more precise, self-documenting code that catches errors at compile time rather than runtime.`,
 		date: '2024-03-08',
-		category: getCategory('development'),
+		category: 'development',
+		categoryName: getCategoryName('development'),
 		tags: ['TypeScript', 'JavaScript', 'Programming'],
 		image: '/images/blog.jpg',
 		slug: 'mastering-typescript-advanced-features',
@@ -91,7 +94,8 @@ Finally, we'll look at monitoring and analytics approaches that help you identif
 
 By implementing these techniques, you'll be well-positioned to deliver exceptional web experiences that delight users and satisfy search engines' increasingly stringent performance requirements.`,
 		date: '2024-03-01',
-		category: getCategory('performance'),
+		category: 'performance',
+		categoryName: getCategoryName('performance'),
 		tags: ['Web Performance', 'Optimization', 'Core Web Vitals'],
 		image: '/images/blog.jpg',
 		slug: 'web-performance-optimization-2024',
@@ -117,7 +121,8 @@ Throughout the article, real-world examples illustrate how organizations includi
 
 By following this practical guide, teams can implement micro-frontends architecture that scales with organizational growth, enables technological flexibility, and ultimately delivers better user experiences.`,
 		date: '2024-02-28',
-		category: getCategory('architecture'),
+		category: 'architecture',
+		categoryName: getCategoryName('architecture'),
 		tags: ['Micro-Frontends', 'Architecture', 'JavaScript'],
 		image: '/images/blog.jpg',
 		slug: 'implementing-micro-frontends',
@@ -141,7 +146,8 @@ The article provides decision frameworks for choosing between these options base
 
 Finally, we'll look at emerging patterns in 2024, including signals-based reactivity and persistent actor models that may shape the future of React state management.`,
 		date: '2024-02-25',
-		category: getCategory('development'),
+		category: 'development',
+		categoryName: getCategoryName('development'),
 		tags: ['React', 'State Management', 'JavaScript'],
 		image: '/images/blog.jpg',
 		slug: 'state-management-2024',
@@ -168,7 +174,8 @@ Testing methodologies complete the picture, with approaches for manual testing, 
 By implementing these practices, developers can create web applications that honor the diversity of human ability and provide equivalent experiences to all users.`,
 
 		date: '2024-02-20',
-		category: getCategory('accessibility'),
+		category: 'accessibility',
+		categoryName: getCategoryName('accessibility'),
 		tags: ['A11y', 'Web Development', 'Inclusion'],
 		image: '/images/blog.jpg',
 		slug: 'building-accessible-web-applications',

@@ -1,6 +1,34 @@
 import blogs from './blogs';
 import categories from './categories';
 
+export const allBlogs = () => {
+	return {
+		statusCode: 200,
+		message: 'Blogs retrieved successfully',
+		data: blogs,
+		meta: {
+			total: blogs.length,
+			limit: 10,
+			page: 1,
+			total_pages: 1,
+		},
+	};
+};
+
+export const blogsByCategory = (categorySlug: string) => {
+	const categoryBlogs = blogs.filter((blog) => blog?.category === categorySlug);
+	return {
+		statusCode: 200,
+		message: 'Blogs retrieved successfully',
+		data: categoryBlogs,
+		meta: {
+			total: categoryBlogs.length,
+			limit: 10,
+			page: 1,
+			total_pages: 1,
+		},
+	};
+};
 export const blogCategories = () => {
 	return {
 		statusCode: 200,

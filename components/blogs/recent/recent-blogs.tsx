@@ -1,7 +1,7 @@
-import { Blogs } from '@/utils';
+import { Blog } from '@/utils/types';
 import { BlogCard } from '../card';
 
-const RecentBlogs = ({ blogs }: { blogs: Blogs }) => {
+const RecentBlogs = ({ blogs }: { blogs: Blog[] }) => {
 	return (
 		<div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
 			{blogs.map((blog, index) => (

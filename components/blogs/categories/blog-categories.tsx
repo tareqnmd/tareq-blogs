@@ -1,8 +1,8 @@
-import { BlogCategories as BlogCategoriesType } from '@/utils/types';
+import { BlogCategory as BlogCategoryType } from '@/utils/types';
 import { Title } from '../../shared';
 import BlogCategory from './blog-category';
 
-const BlogCategories = ({ categories }: { categories: BlogCategoriesType }) => {
+const BlogCategories = ({ categories }: { categories: BlogCategoryType[] }) => {
 	return (
 		<div className="flex flex-col gap-4 md:gap-6">
 			<Title>Blog by Categories</Title>
