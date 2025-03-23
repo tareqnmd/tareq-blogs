@@ -31,9 +31,9 @@ export const generateStaticParams = async () => {
 export const generateMetadata = async ({
 	params,
 }: {
-	params: { slug: string };
+	params: Promise<{ slug: string }>;
 }) => {
-	const { slug } = params;
+	const { slug } = await params;
 	const blog = await getData(slug);
 	return {
 		title: blog.title,
@@ -42,9 +42,12 @@ export const generateMetadata = async ({
 	};
 };
 
-const BlogPage = async ({ params }: { params: { slug: string } }) => {
-	const { slug } = params;
+const BlogPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
+	const { slug } = await params;
 	const blog = await getData(slug);
+	if (!blog) {
+		notFound();
+	}
 	return <BlogDetails blog={blog} />;
 };
 
