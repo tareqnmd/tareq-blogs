@@ -6,7 +6,7 @@ const BlogCardTitle = ({ blog }: { blog: Blog }) => {
 	return (
 		<Link
 			href={`${Routes.BLOGS}/${slug}`}
-			className="md:text-2xl leading-none xs:text-xl text-lg font-semibold w-max"
+			className="md:text-2xl leading-none xs:text-xl text-lg font-semibold max-w-max"
 		>
 			{title}
 		</Link>

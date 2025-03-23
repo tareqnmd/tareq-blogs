@@ -1,7 +1,7 @@
-export { default as BlogCategory } from './BlogCategory';
-export { default as BlogDate } from './BlogDate';
-export { default as BlogHeaderInfo } from './BlogHeaderInfo';
-export { default as BlogReadTime } from './BlogReadTime';
-export { default as BlogViews } from './BlogVIews';
+export { default as BlogCategory } from './blog-category';
+export { default as BlogDate } from './blog-date';
+export { default as BlogHeaderInfo } from './blog-header-info';
+export { default as BlogReadTime } from './blog-read-time';
+export { default as BlogViews } from './blog-views';
 
 export * from './tags';

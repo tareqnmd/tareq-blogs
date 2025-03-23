@@ -1,48 +1,36 @@
-# Next.js Blog Site
+# Clone the repository
 
-A modern, fast, and SEO-friendly blog built with Next.js 14, TypeScript, and Tailwind CSS.
+git clone https://github.com/username/project-name.git
 
-## Features
+# Navigate to the project directory
 
-- 📝 Markdown-based blog posts
-- 🎨 Responsive design with Tailwind CSS
-- 🚀 Fast page loads with Next.js
-- 🔍 SEO optimized
-- 📱 Mobile-friendly
-- 🌙 Dark mode support (optional)
+cd project-name
 
-## Getting Started
+# Install dependencies
 
-### Prerequisites
-
-- Node.js 18.17 or later
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/your-blog.git
-cd your-blog
-```
-
-2. Install dependencies:
-
-```bash
 npm install
-# or
-yarn install
-```
 
-3. Run the development server:
+# Run the development server
 
-```bash
 npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) to view your blog.
+# Build for production
 
-## Project Structure
+npm run build
+
+# Start the production server
+
+npm start
+
+EXAMPLE_ENV_VAR=value
+API_KEY=your_api_key
+
+project-name/
+├── public/ # Static files
+├── src/ # Source files
+│ ├── components/ # UI components
+│ ├── pages/ # Page components
+│ ├── styles/ # CSS/SCSS files
+│ └── utils/ # Utility functions
+├── tests/ # Test files
+└── README.md # Project documentation

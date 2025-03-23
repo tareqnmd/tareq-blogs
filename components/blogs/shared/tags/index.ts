@@ -1,2 +1,2 @@
-export { default as BlogTag } from './BlogTag';
-export { default as BlogTags } from './BlogTags';
+export { default as BlogTag } from './blog-tag';
+export { default as BlogTags } from './blog-tags';

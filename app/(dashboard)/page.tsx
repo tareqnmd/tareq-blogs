@@ -1,7 +1,12 @@
-import Dashboard from '@/components/blogs/Dashboard';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Tareq Blogs',
+	description: 'Tareq Blogs',
+};
 
 const DashboardPage = () => {
-	return <Dashboard />;
+	return null;
 };
 
 export default DashboardPage;
