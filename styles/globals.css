@@ -1,8 +1,0 @@
-@import './variables.css';
-@import './tailwind.css';
-
-body {
-	color: var(--foreground);
-	background: var(--background);
-	font-family: var(--font-pt-sans);
-}
